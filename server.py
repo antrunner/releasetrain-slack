@@ -3,7 +3,8 @@ from slack import WebClient
 from slack.errors import SlackApiError
 import os
 
-client = WebClient(token=os.environ['RT_SLACK_API_TOKEN'])
+#client = WebClient(token=os.environ['RT_SLACK_API_TOKEN'])
+client = WebClient(token="xoxb-1358038358513-1351615611828-wi4NPQG6oIwHsYzgjS4bIEb0")
 
 app = Flask(__name__) 
  
@@ -21,7 +22,7 @@ def index():
 	    # You will get a SlackApiError if "ok" is False
 	    assert e.response["ok"] is False
 	    assert e.response["error"]  # str like 'invalid_auth', 'channel_not_found'
-	    print(f"Got an error: {e.response['error']}")
+	    print("Got an error: {e.response['error']}")
 	
 	return "\nOK\n"
 
