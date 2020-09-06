@@ -7,7 +7,7 @@ client = WebClient(token=os.environ['RT_SLACK_API_TOKEN'])
 
 app = Flask(__name__) 
  
-@app.route('/', methods=["POST"]) 
+@app.route('/slack', methods=["POST"]) 
 def index():
 	release= request.json["versionProductName"] 
 	release+= " v" + request.json["versionNumber"]
