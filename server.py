@@ -3,7 +3,7 @@ from slack import WebClient
 from slack.errors import SlackApiError
 import os
 
-client = WebClient(token=os.environ['SLACK_API_TOKEN'])
+client = WebClient(token=os.environ['RT_SLACK_API_TOKEN'])
 
 app = Flask(__name__) 
  
