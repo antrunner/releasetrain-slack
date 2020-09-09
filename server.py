@@ -14,7 +14,7 @@ def index():
 	release+= "\n" + request.json["versionReleaseNotes"]
 	try:
 	    response = client.chat_postMessage(
-	        channel='#general',
+	        channel='#release',
 	        text=release)
 	    #assert response["message"]["text"] == release
 	except SlackApiError as e:
